@@ -1,0 +1,22 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-60%);
+  }
+
+#start {
+    width: 70%;
+    margin:auto;
+    --ion-background-color:#e02d2d;
+}
+
+#btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
+    transform: translateY(-20%);
+}

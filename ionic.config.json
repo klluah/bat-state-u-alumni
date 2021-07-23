@@ -1,0 +1,7 @@
+{
+  "name": "BatStateU Alumni",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

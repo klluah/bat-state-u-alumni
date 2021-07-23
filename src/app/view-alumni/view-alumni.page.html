@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" default="/tabs/home">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alumni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [scrollEvents]="true"event
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($)"
+  (ionScrollEnd)="logScrollEnd()">
+  <ion-toolbar>
+    <ion-card>
+      <center><img src="./assets/profile_icon.png"></center>
+      <ion-card-header>
+        <center><ion-card-title>John D. Doe</ion-card-title></center>
+        <center><ion-card-subtitle><b>Batch 2014</b></ion-card-subtitle></center>
+      </ion-card-header>
+      <hr style="background:rgb(194, 194, 194);">
+
+      <ion-card-content>
+        <b>Alumni Information: </b><br>
+        <ul>
+          <li>Year Graduated: <b>2014</b></li>
+          <li>Srcode: <b>18-12345</b></li>
+          <li>Campus: <b>BatStateU Pablo Borbon Main II</b></li>
+          <li>Program: <b>Computer Science</b></li>
+        </ul>
+
+        <b>Educational Background:</b><br>
+        <ul>
+          <li>BatStateU - Bachelor of Science in Computer Science</li>
+          <li>Cum Laude</li>
+          <li>GWA: <b>1.50</b></li>
+        </ul>
+
+        <b>Achievements and Certificates:</b><br>
+        <ul>
+          <li>Led and managed a team of six in developing new financial management software.</li>
+          <li>Developed company procedures and guidelines for data analysis and security that increased efficiency by 30% in the first six months after implementation.</li>
+          <li>Conceptualized, planned, launched, and led the Search Engine Optimization committee.</li>
+        </ul>
+
+        <b>Job Experiences:</b><br>
+        <ul>
+          <li>Web Developer Intern - Used: Javacript, HTML/CSS, SQL (April 2014 - September 2016)</li>
+          <li>FrontEnd Developer at Eton Properties Philippines, Inc.(2 years)</li>
+          <li>Software Tester at Anchor Land Holdings, Inc.(1 year & 7 months)</li>
+        </ul>
+
+        <b>Skills:</b><br>
+        <ul>
+          <li>Software Development</li>
+          <li>Information Systems Management</li>
+          <li>Computer and Technology Knowledge</li>
+          <li>Problem Solving</li>
+          <li>Teamwork & Cooperation</li>
+          <li>Time Management</li>
+        </ul>
+
+        <b>Contact Information:</b><br>
+        Address: <b>Mabini, Batangas</b><br>
+        Email Address: <b>johnddoe@gmail.com</b><br>
+        Mobile Number: <b>09123456789</b><br>
+      </ion-card-content>
+    </ion-card>
+  </ion-toolbar>
+</ion-content>

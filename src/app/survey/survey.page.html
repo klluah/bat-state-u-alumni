@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <center><ion-title>Survey</ion-title></center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-toolbar>
+    <form [formGroup]="alumniForm" >
+      <ion-item>
+        <ion-label>Full Name: </ion-label>
+        <ion-input formControlName="fullName" placeholder="Full Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Birthdate: </ion-label>
+        <ion-input formControlName="birthdate" placeholder="Birthdate"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email : </ion-label>
+        <ion-input  formControlName="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mobile Number: </ion-label>
+        <ion-input formControlName="mobileNumber" placeholder="Mobile Number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Address: </ion-label>
+        <ion-input formControlName="address" placeholder="Address"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Srcode: </ion-label>
+        <ion-input formControlName="srcode" placeholder="Srcode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Campus</ion-label>
+        <ion-select formControlName="campus" value="notifications" interface="action-sheet">
+          <ion-select-option value="main1">BatStateU Pablo Borbon Main I</ion-select-option>
+          <ion-select-option value="main2">BatStateU Pablo Borbon Main II</ion-select-option>
+          <ion-select-option value="balayan">BatStateU Balayan</ion-select-option>
+          <ion-select-option value="lemery">BatStateU Lemery</ion-select-option>
+          <ion-select-option value="mabini">BatStateU Mabini</ion-select-option>
+          <ion-select-option value="malvar">BatStateU JPLPC Malvar</ion-select-option>
+          <ion-select-option value="lipa">BatStateU Lipa</ion-select-option>
+          <ion-select-option value="rosario">BatStateU Rosario</ion-select-option>
+          <ion-select-option value="sanjuan">BatStateU San Juan</ion-select-option>
+          <ion-select-option value="lobo">BatStateU Lobo</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Program</ion-label>
+        <ion-select formControlName="program" value="notifications" interface="action-sheet">
+          <ion-select-option value="EAFA">Engineering, Architecture and Fine Arts</ion-select-option>
+          <ion-select-option value="AA">Arts and Sciences</ion-select-option>
+          <ion-select-option value="ABIH">Accountancy, Business, and International Hospitality</ion-select-option>
+          <ion-select-option value="ICS">Informatics and Computing Sciences</ion-select-option>
+          <ion-select-option value="NND">Nursing, Nutrition and Dietetics</ion-select-option>
+          <ion-select-option value="IT">Industrial Technology</ion-select-option>
+          <ion-select-option value="AF">Agriculture and Forestry</ion-select-option>
+          <ion-select-option value="L">Law</ion-select-option>
+          <ion-select-option value="BE">Basic Education</ion-select-option>
+          <ion-select-option value="TE">Teacher Education</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>General Weighted Average: </ion-label>
+        <ion-input formControlName="gwa" placeholder="GWA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Year Graduated: </ion-label>
+        <ion-input formControlName="batch" placeholder="Year Graduated"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Educational Background</ion-label>
+        <ion-textarea formControlName="educationalBG" placeholder="Educational Background"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Achievements and Certificates</ion-label>
+        <ion-textarea formControlName="achievements" placeholder="Achievements and other Cridentials"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Job Experiences</ion-label>
+        <ion-textarea formControlName="jobExperiences" placeholder="Job Experiences"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Skills</ion-label>
+        <ion-textarea formControlName="skills" placeholder="Skills"></ion-textarea>
+      </ion-item>
+      <br>
+      <ion-button expand="block" color="danger" id="submit" (click)="createRecord()">Submit</ion-button>
+      <br><br>
+    </form>  
+  </ion-toolbar>
+  <!-- <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="search" (click)="searchSelected()">
+          <ion-icon name="search-outline"></ion-icon>
+          <ion-label>Search</ion-label>
+        </ion-tab-button>
+  
+        <ion-tab-button tab="jobs" (click)="jobsSelected()">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <ion-label>Jobs</ion-label>
+          <ion-badge>6</ion-badge>
+        </ion-tab-button>
+  
+        <ion-tab-button tab="home" (click)="homeSelected()">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+  
+        <ion-tab-button tab="survey" (click)="surveySelected()">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <ion-label>Survey</ion-label>
+        </ion-tab-button>
+  
+        <ion-tab-button tab="profile" (click)="profileSelected()">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar> -->
+</ion-content>
+
+    

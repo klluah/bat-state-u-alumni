@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+    <center>Home</center>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-card>
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        
+        <ion-label>John D. Doe</ion-label> 
+        <ion-button fill="outline" slot="end" color="danger" routerLink="/view-alumni">View Alumni</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Batch: <b>2014</b><br>
+        Campus: <b>BatStateU Pablo Borbon Main II</b><br>
+        Program: <b>Informatics and Computing Sciences</b><br>
+        <b>JOB EXPERIENCES:</b><br>
+        <ul>
+          <li>Web Developer Intern - Used: Javacript, HTML/CSS, SQL (April 2014 - September 2016)</li>
+          <li>FrontEnd Developer at Eton Properties Philippines, Inc.(2 years)</li>
+          <li>Software Tester at Anchor Land Holdings, Inc.(1 year & 7 months)</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Kaye C. Alvarez</ion-label> 
+        <ion-button fill="outline" slot="end" color="danger" routerLink="/view-alumni">View Alumni</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Batch: <b>2016</b><br>  
+        Campus: <b>BatStateU JPLPC Malvar</b><br>
+        Program: <b>Teacher Education</b><br>
+        <b>JOB EXPERIENCES:</b><br>
+        <ul>
+          <li>Computer Teacher - Bauan Colleges Inc. (2016 - 2020)</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Alvin L. Magnaye</ion-label> 
+        <ion-button fill="outline" slot="end" color="danger" routerLink="/view-alumni">View Alumni</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Batch: <b>2012</b><br>  
+        Campus: <b>BatStateU Pablo Borbon Main I</b><br>
+        Program: <b>Nursing, Nutrition and Dietetics</b><br>
+        <b>JOB EXPERIENCES:</b><br>
+        <ul>
+          <li>Staff Nurse - Northwest Community Hospital(2013 - 2019)</li>
+          <li>RN Case Manager, In-pacient Pediatrics - Northwest Community Hospital(2019 - present)</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </ion-toolbar>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom"> 
+      <ion-tab-button tab="search" (click)="searchSelected()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="jobs" (click)="jobsSelected()">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-badge>3</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="home" (click)="homeSelected()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+
+      <!-- <ion-tab-button tab="survey" (click)="surveySelected()">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </ion-tab-button> -->
+
+      <ion-tab-button tab="profile" (click)="profileSelected()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

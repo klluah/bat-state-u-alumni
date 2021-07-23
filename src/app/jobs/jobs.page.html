@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <center><ion-title>Jobs</ion-title></center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [scrollEvents]="true"event
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($)"
+  (ionScrollEnd)="logScrollEnd()">
+
+  <ion-toolbar>
+    <ion-card>
+      <center><img src="./assets/accenture.png"></center>
+      <ion-card-header>
+        <ion-card-subtitle>Accenture - Calamba, Laguna</ion-card-subtitle>
+        <ion-card-title>Software Engineer</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <b>Job Description</b><br>
+        <p style="text-align:justify">We are looking for software developers to develop software for industrial controllers and instruments. Some of the microcontrollers you’ll be using include atmel, Microchip ATSAMD51, and E54 microcontrollers. Experience with these microcontrollers are not completely necessary as long as you have experience with C++, version 11 and up. Familiarity with C# and some windows applications would also be helpful to support the controllers mentioned above.</p><br>
+        <ion-button color="danger" routerLink="/view-details">Apply Now</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <br>
+
+    <ion-card>
+      <center><img src="./assets/dyson.png"></center>
+      <ion-card-header>
+        <ion-card-subtitle>Dyson - Muntinlupa, Metro Manila</ion-card-subtitle>
+        <ion-card-title>Software Tester Engineer</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <b>Job Description</b><br>
+        <p style="text-align:justify">Verify Dyson products software features, compatibility and performance, including soak, robust and stability test.Develop software test strategies; create software test plans.Design test cases and automation test scripts, select regression test cases.Build-up software automation test environment.Execute related software tests, and report problems via the defect tracking system.</p><br>
+        <ion-button color="danger" routerLink="/view-details">Apply Now</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <center><img src="./assets/accenture.png"></center>
+      <ion-card-header>
+        <ion-card-subtitle>Accenture - Calamba, Laguna</ion-card-subtitle>
+        <ion-card-title>Quality Assurance Engineer</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <b>Job Description</b><br>
+        <p style="text-align:justify">You will design, develop, modify, debug and/or maintain software code according to functional, non-functional and technical design specifications. You will follow Amdocs software engineering standards, applicable software development methodology and release processes, to ensure code is maintainable, scalable, and supportable, and demo the software products to stakeholders.</p><br>
+        <ion-button item-right color="danger" routerLink="/view-details">Apply Now</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <br>
+  </ion-toolbar>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="search" (click)="searchSelected()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="jobs" (click)="jobsSelected()">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-badge>3</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="home" (click)="homeSelected()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+
+      <!-- <ion-tab-button tab="survey" (click)="surveySelected()">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </ion-tab-button> -->
+
+      <ion-tab-button tab="profile" (click)="profileSelected()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> 
+</ion-toolbar>

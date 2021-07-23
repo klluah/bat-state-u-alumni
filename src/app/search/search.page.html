@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <center><ion-title>Search</ion-title></center>
+  </ion-toolbar>
+  <ion-toolbar>
+    <br><br>
+    <ion-searchbar showCancelButton (ionInput)="filterList"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-title *ngFor="let item of Alumni">
+      <ion-label>{{item.name}}</ion-label>
+    </ion-title>
+  </ion-list>
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="search" (click)="searchSelected()">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="jobs" (click)="jobsSelected()">
+      <ion-icon name="briefcase-outline"></ion-icon>
+      <ion-badge>3</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="home" (click)="homeSelected()">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- <ion-tab-button tab="survey" (click)="surveySelected()">
+      <ion-icon name="document-text-outline"></ion-icon>
+    </ion-tab-button> -->
+
+    <ion-tab-button tab="profile" (click)="profileSelected()">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

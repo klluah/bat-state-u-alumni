@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <center><ion-title>Profile</ion-title></center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-card *ngFor="let item of alumniList">
+      <center><img src="./assets/profile_icon.png"></center>
+      <ion-card-header>
+        <center><ion-card-title>{{item.fullName}}</ion-card-title></center>
+        <center><ion-card-subtitle><b>{{item.batch}}</b></ion-card-subtitle></center>
+      </ion-card-header>
+      <hr style="background:rgb(194, 194, 194);">
+
+      <ion-card-content>
+        <b>Alumni Information: </b><br>
+        <ul>
+          <li>Year Graduated: <b>{{item.batch}}</b></li>
+          <li>Srcode: <b>{{item.srcode}}</b></li>
+          <li>Campus: <b>{{item.campus}}</b></li>
+          <li>Program: <b>{{item.program}}C</b></li>
+        </ul>
+
+        <b>Educational Background:</b><br>
+        <ul> 
+          <!-- <li>{{item.educationalBG}}</li> -->
+          <li>BatStateU - Bachelor of Science in Computer Science</li>
+          <li>Cum Laude</li>
+          <li>GWA: <b>{{item.gwa}}</b></li>
+        </ul>
+
+        <b>Achievements and Certificates:</b><br>
+        <ul>
+          <!-- <li>{{item.achievements}}</li> -->
+          <li>Led and managed a team of six in developing new financial management software.</li>
+          <li>Developed company procedures and guidelines for data analysis and security that increased efficiency by 30% in the first six months after implementation.</li>
+          <li>Conceptualized, planned, launched, and led the Search Engine Optimization committee.</li>
+        </ul>
+
+        <b>Job Experiences:</b><br>
+        <ul>
+          <!-- <li>{{item.jobExperiences}}</li> -->
+          <li>Web Developer Intern - Used: Javacript, HTML/CSS, SQL (April 2014 - September 2016)</li>
+          <li>FrontEnd Developer at Eton Properties Philippines, Inc.(2 years)</li>
+          <li>Software Tester at Anchor Land Holdings, Inc.(1 year & 7 months)</li>
+        </ul>
+
+        <b>Skills:</b><br>
+        <ul>
+          <!-- <li>{{item.skills}}</li> -->
+          <li>Software Development</li>
+          <li>Information Systems Management</li>
+          <li>Computer and Technology Knowledge</li>
+          <li>Problem Solving</li>
+          <li>Teamwork & Cooperation</li>
+          <li>Time Management</li>
+        </ul>
+
+        <b>Contact Information:</b><br>
+        Address: <b>{{item.address}}</b><br>
+        Email : <b>{{item.email}}</b><br>
+        Mobile Number: <b>{{item.mobileNumber}}</b><br>
+      </ion-card-content>
+    </ion-card> 
+    <ion-button expand="block" color="danger" id="logout" (click)="logout()">Logout</ion-button><br>
+  </ion-toolbar>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="search" (click)="searchSelected()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="jobs" (click)="jobsSelected()">
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-badge>3</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="home" (click)="homeSelected()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+
+      <!-- <ion-tab-button tab="survey" (click)="surveySelected()">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </ion-tab-button> -->
+
+      <ion-tab-button tab="profile" (click)="profileSelected()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>
+
+<!-- <ion-toolbar>
+    <ion-card>
+      <center><img src="./assets/profile_icon.png"></center>
+      <ion-card-header>
+        <center><ion-card-title>John D. Doe</ion-card-title></center>
+        <center><ion-card-subtitle><b>Batch 2016</b></ion-card-subtitle></center>
+      </ion-card-header>
+      <hr style="background:rgb(194, 194, 194);">
+
+      <ion-card-content>
+        <b>Alumni Information: </b><br>
+        <ul>
+          <li>Year Graduated: <b>2016</b></li>
+          <li>Srcode: <b>18-23132</b></li>
+          <li>Campus: <b>BatStateU Pablo Borbon Main II</b></li>
+          <li>Program: <b>Computer Science</b></li>
+        </ul>
+
+        <b>Educational Background:</b><br>
+        <ul>
+          <li>BatStateU - Bachelor of Science in Computer Science</li>
+          <li>Cum Laude</li>
+          <li>GWA: <b>1.50</b></li>
+        </ul>
+
+        <b>Achievements and Certificates:</b><br>
+        <ul>
+          <li>Led and managed a team of six in developing new financial management software.</li>
+          <li>Developed company procedures and guidelines for data analysis and security that increased efficiency by 30% in the first six months after implementation.</li>
+          <li>Conceptualized, planned, launched, and led the Search Engine Optimization committee.</li>
+        </ul>
+
+        <b>Job Experiences:</b><br>
+        <ul>
+          <li>Web Developer Intern - Used: Javacript, HTML/CSS, SQL (April 2014 - September 2016)</li>
+          <li>FrontEnd Developer at Eton Properties Philippines, Inc.(2 years)</li>
+          <li>Software Tester at Anchor Land Holdings, Inc.(1 year & 7 months)</li>
+        </ul>
+
+        <b>Skills:</b><br>
+        <ul>
+          <li>Software development</li>
+          <li>Information systems management</li>
+          <li>Computer and technology knowledge</li>
+          <li>Problem-solving</li>
+          <li>Teamwork & cooperation</li>
+          <li>Time management</li>
+        </ul>
+
+        <b>Contact Information:</b><br>
+        Address: <b>Mabini, Batangas</b><br>
+        Email Address: <b>johnddoe@gmail.com</b><br>
+        Mobile Number: <b>09464372012</b><br>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" color="danger" id="logout" (click)="logout()">Logout</ion-button><br>
+  </ion-toolbar> -->
